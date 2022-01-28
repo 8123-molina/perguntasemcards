@@ -15,6 +15,7 @@ class HomePage extends HookWidget {
         TextField(
           controller: textController,
         ),
+        SizedBox(height: 10),
         TextField(
           controller: textController2,
         ),

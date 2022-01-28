@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:perguntasemcards/pages/home_page.dart';
+import 'package:perguntasemcards/view/home_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      initialRoute: '/preload',
+      routes: {
+        '/login' : (_) => const LoginPage(title:'Login');
+        '/register' : (_) => const RegisterPage(title:'Register');
+        '/home' : (_) => const HomePage(title:'Home');
+        '/cards' : (_) => const CardsPage(title:'cards');
+        '/favoritos' : (_) => const FavoritosPage(title:'Favorit');
+      },
     );
   }
 }
